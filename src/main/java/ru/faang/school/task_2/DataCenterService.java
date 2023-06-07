@@ -1,6 +1,11 @@
 package ru.faang.school.task_2;
 
-public class DataCenterService {
+public class DataCenterService implements OptimizationStrategy{
+    private double load;
+
+    public DataCenterService(double load) {
+        this.load = load;
+    }
     public void addServers(Server server){
 
     }
@@ -17,4 +22,8 @@ public class DataCenterService {
 
     }
 
+    @Override
+    public void optimize(DataCenter dataCenter) {
+
+    }
 }
