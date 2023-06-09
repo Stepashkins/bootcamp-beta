@@ -1,35 +1,24 @@
 package ru.faang.school.task_2;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Server {
-    private double load;
-    private double maxLoad;
-    private double energyConsumption;
+    @Getter @Setter private double load;
+    @Getter @Setter private double maxLoad;
+    @Getter @Setter private double energyConsumption;
     public void addLoad(double load){
         this.load += load;
     }
 
-    public double getLoad() {
-        return load;
-    }
-
-    public void setLoad(double load) {
-        this.load = load;
-    }
-
-    public double getMaxLoad() {
-        return maxLoad;
-    }
-
-    public void setMaxLoad(double maxLoad) {
+    public Server(double maxLoad, double energyConsumption) {
+        this.load = 0;
         this.maxLoad = maxLoad;
-    }
-
-    public double getEnergyConsumption() {
-        return energyConsumption;
-    }
-
-    public void setEnergyConsumption(double energyConsumption) {
         this.energyConsumption = energyConsumption;
+    }
+
+    public double getFreeLoad(){
+        return maxLoad - load;
     }
 
 }

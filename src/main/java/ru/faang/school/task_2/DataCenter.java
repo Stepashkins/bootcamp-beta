@@ -1,17 +1,14 @@
 package ru.faang.school.task_2;
 
-import java.util.ArrayList;
+import lombok.Getter;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+@Getter
 public class DataCenter {
-    private List<Server> servers = new ArrayList<>();
+    private Map<String,Server> allServers = new HashMap<>();
 
-    public List<Server> getServers() {
-        return servers;
-    }
-
-    public void setListOfServers(List<Server> servers) {
-        this.servers = servers;
-    }
 
 }
